@@ -1,0 +1,131 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Tuyệt đối không cho scroll */
+}
+
+.main-title {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.sheet-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px auto;
+    width: 95%;
+    max-width: 1000px;
+    flex-grow: 1; /* Khung nhạc tự giãn nở chiếm chỗ trống */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+
+#staff {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+    background: #121212;
+}
+
+.tempo-control {
+    display: flex;
+    align-items: center;
+    background: #222;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid #444;
+}
+
+#tempo-display {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: #00ffcc;
+    margin: 0 10px;
+}
+
+.tempo-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.main-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: #333;
+    color: #bbb;
+}
+
+/* Hiệu ứng sáng nút khi chọn */
+.mode-btn.active {
+    background-color: #0088ff !important;
+    color: white !important;
+    box-shadow: 0 0 15px #0088ff !important;
+    border: 2px solid white !important;
+}
+
+.action-btn {
+    background-color: #444;
+    color: #fff;
+}
+
+.status-msg {
+    display: none;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.footer {
+    padding: 5px;
+    font-size: 10px;
+    color: #888;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .main-title { font-size: 1.2rem; }
+    button { padding: 8px 10px; font-size: 0.75rem; }
+}
